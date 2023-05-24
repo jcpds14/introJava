@@ -10,7 +10,13 @@ public class Main {
         dogOne.cor = "Marrom";
         dogOne.height = 50;
         dogOne.weight = 25;
-        System.out.println(dogOne.name);
+
+        //dogOne.bark();
+        //System.out.println(dogOne.name + " pegou uma " + dogOne.take());
+
+        System.out.println(dogOne.name + " está " + dogOne.interact("carinho"));
+        System.out.println(dogOne.name + " está " + dogOne.interact("nada"));
+        System.out.println(dogOne.name + " está " + dogOne.interact("vai dormir!"));
 
     }
 }
