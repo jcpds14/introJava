@@ -1,7 +1,8 @@
 package Animals;
 
 public class Dog {
-//Attributes
+    //Attributes
+    static int numberOfDogs;
     private String name;
     private String color;
     private double height;
@@ -10,9 +11,10 @@ public class Dog {
     private String stateOfMind;
 
     //Default constructor
-    public Dog(){}
+    public Dog() {
+    }
 
-    //Aditionals constructors
+    //Additional constructors
     public Dog(String name, String color, double height, double weight, int age, String stateOfMind) {
         this.name = name;
         this.color = color;
@@ -20,9 +22,20 @@ public class Dog {
         this.weight = weight;
         this.age = age;
         this.stateOfMind = stateOfMind;
+
+        numberOfDogs ++;
     }
 
     //Methods
+
+    public static int getNumberOfDogs() {
+        return numberOfDogs;
+    }
+
+    public static void setNumberOfDogs(int numberOfDogs) {
+        Dog.numberOfDogs = numberOfDogs;
+    }
+
     public String getName() {
         return name;
     }
@@ -104,4 +117,10 @@ public class Dog {
         return stateOfMind;
     }
 
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
