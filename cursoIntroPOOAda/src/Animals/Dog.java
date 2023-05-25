@@ -1,32 +1,21 @@
 package Animals;
 
-public class Dog {
-    //Attributes
+public class Dog extends Animal {
+
     static int numberOfDogs;
-    private String name;
-    private String color;
-    private double height;
-    private double weight;
-    private int age;
-    private String stateOfMind;
 
     //Default constructor
-    public Dog() {
-    }
 
-    //Additional constructors
     public Dog(String name, String color, double height, double weight, int age, String stateOfMind) {
-        this.name = name;
-        this.color = color;
+        super(name, color, weight);
         this.height = height;
-        this.weight = weight;
         this.age = age;
         this.stateOfMind = stateOfMind;
 
-        numberOfDogs ++;
+        numberOfDogs++;
     }
 
-    //Methods
+//Methods
 
     public static int getNumberOfDogs() {
         return numberOfDogs;
@@ -80,13 +69,6 @@ public class Dog {
         return stateOfMind;
     }
 
-    public void eat() {
-    }//Method - in this case, is public, don't use return value, don't have parameters
-
-    public void bark() {
-        System.out.println("AU AU");
-    }
-
     public String take() {
         return "Bolinha";
     }
@@ -106,14 +88,6 @@ public class Dog {
                 this.stateOfMind = "Neutro";
         }
 
-
-//        if (action.equals("carinho")){
-//            this.stateOfMind = "Feliz";
-//        }else if (action.equals("vai dormir!")){
-//            this.stateOfMind = "Bravo";
-//        }else{
-//            this.stateOfMind = "Neutro";
-//        }
         return stateOfMind;
     }
 
@@ -122,5 +96,9 @@ public class Dog {
         return "Dog{" +
                 "name='" + name + '\'' +
                 '}';
+    }
+    @Override
+    public void sound() {
+        System.out.println("AU AU");
     }
 }

@@ -1,21 +1,19 @@
+import Animals.Bird;
+import Animals.Cat;
 import Animals.Dog;
 
 public class Main {
     public static void main(String[] args) {
 
         Dog dogOne = new Dog("Aron", "Marrom", 50, 20, 1, "nada");
-        Dog dogTwo = new Dog("Jimmy", "Marrom", 50, 20, 1, "nada");
 
+        Cat catOne = new Cat("Felix", "Preto", 5.5);
 
-        System.out.println(dogOne.toString());
-        System.out.println(dogTwo.toString());
-        System.out.println(dogOne.getNumberOfDogs());
-        System.out.println("------------------");
-        System.out.println(dogOne.toString());
-        System.out.println(dogTwo.toString());
+        Bird birdOne = new Bird("Jhonny", "Marrom", 1);
 
-        System.out.println(dogTwo.getNumberOfDogs());
-        System.out.println(dogOne.getNumberOfDogs());
+        dogOne.sound();
+        catOne.sound();
+        birdOne.sound();
 
     }
 }
